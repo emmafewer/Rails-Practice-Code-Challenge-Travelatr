@@ -1,0 +1,10 @@
+<%= @post.title %><br><br>
+<%= @post.content %><br><br>
+By: <%= link_to @post.blogger.name, blogger_path(@post.blogger) %><br><br>
+Destination: <%= link_to @post.destination.name, destination_path(@post.destination) %><br><br>
+Likes: <%= @post.likes %>
+<%= button_to "Edit", edit_post_path, method: 'get' %>
+<%= button_to "Like", like_path(@post), method: :put %>
+
+
+

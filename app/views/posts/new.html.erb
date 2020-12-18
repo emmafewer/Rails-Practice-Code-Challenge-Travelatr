@@ -1,0 +1,15 @@
+<% if flash[:errors] %>
+    <% flash[:errors].each do |error| %>
+        <%= error %><br>
+    <% end %>
+<% end %>
+
+<%= form_with model: @post do |f| %>
+    Blogger: <%= f.collection_select :blogger_id, @bloggers, :id, :name %>
+    Destination: <%= f.collection_select :destination_id, @destinations, :id, :name %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <%= f.label :content %>
+    <%= f.text_area :content %>
+    <%= f.submit %>
+<% end %>

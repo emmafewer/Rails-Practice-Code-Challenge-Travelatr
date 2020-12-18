@@ -1,0 +1,12 @@
+Name: <%= @blogger.name %><br>
+Bio: <%= @blogger.bio %><br>
+Age: <%= @blogger.age %><br>
+Total Likes: <%= @blogger.total_likes %><br><br>
+Featured Post: <%= link_to @blogger.top_post.title, @blogger.top_post %><br><br>
+Top 5 Destinations: <% @blogger.top_five.each do |destination|%><br>
+                         <%= destination.name %>
+                    <% end %>
+
+
+
+

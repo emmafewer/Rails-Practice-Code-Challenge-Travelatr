@@ -1,0 +1,10 @@
+<% @destination.posts.each do |post| %>
+    <%= post.title %><br>
+<% end %>
+
+<% @destination.most_recent.each do |post| %>
+    <%= post.title %><br><br>
+<% end %>
+
+Featured Post: <%= link_to @destination.top_post.title, post_path(@destination.top_post) %><br><br>
+Average Age: <%= @destination.average_age %>
